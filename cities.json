@@ -1,0 +1,922 @@
+[
+  {
+    "name": "Washington",
+    "state": "DC",
+    "history": "Established by the Residence Act of 1790, Washington D.C. was purpose-built as the permanent seat of the United States government. French engineer Pierre Charles L'Enfant drafted its ambitious plan of grand avenues and circles. The city was burned by British forces during the War of 1812, then rebuilt and expanded. Over two centuries it has grown from a swampy riverside settlement into the political epicenter of the free world.",
+    "famousPeople": [
+      "Duke Ellington – jazz legend born in the Shaw neighborhood",
+      "Marvin Gaye – soul pioneer raised in Northeast D.C.",
+      "Dave Chappelle – comedian who grew up in Silver Spring just outside the city",
+      "John Philip Sousa – 'The March King,' born at Capitol Hill",
+      "Goldie Hawn – actress and producer, native of D.C."
+    ],
+    "attractions": [
+      "The National Mall & Memorial Parks",
+      "Smithsonian Institution (19 museums, free admission)",
+      "Lincoln Memorial",
+      "National Museum of African American History & Culture",
+      "United States Capitol",
+      "Georgetown Waterfront"
+    ],
+    "funFact": "Washington D.C. has no skyscrapers. A 1910 Height of Buildings Act limits structures to 130 feet so that the Capitol dome remains the tallest point visible on the skyline."
+  },
+  {
+    "name": "Chicago",
+    "state": "IL",
+    "history": "Incorporated as a city in 1837, Chicago exploded in size due to its strategic position at the junction of the Great Lakes and the Mississippi River watershed. The catastrophic Great Chicago Fire of 1871 leveled roughly four square miles of the city, yet Chicagoans rebuilt in just two years — this time with pioneering steel-frame skyscraper construction that permanently changed world architecture. The city also served as a crucial hub of the Great Migration, welcoming hundreds of thousands of Black Americans from the South during the 20th century.",
+    "famousPeople": [
+      "Barack Obama – 44th U.S. President, community organizer on the South Side",
+      "Oprah Winfrey – media mogul who built her empire in Chicago",
+      "Ernest Hemingway – Nobel laureate born in nearby Oak Park",
+      "Walt Disney – born in Chicago, raised values that shaped his creative empire",
+      "Kanye West – rapper and producer who grew up on the South Side",
+      "Michael Jordan – six-time NBA champion with the Bulls"
+    ],
+    "attractions": [
+      "Millennium Park and Cloud Gate (The Bean)",
+      "Art Institute of Chicago",
+      "Navy Pier",
+      "Willis Tower Skydeck",
+      "The 606 Trail",
+      "Chicago Architecture River Cruise"
+    ],
+    "funFact": "Chicago's famous nickname 'The Windy City' has nothing to do with weather — it was coined by New York journalists mocking long-winded Chicago politicians during the 1893 World's Fair campaign."
+  },
+  {
+    "name": "New York",
+    "state": "NY",
+    "history": "Founded as New Amsterdam by Dutch colonists in 1626, the settlement was taken over by the English in 1664 and renamed New York. It served as the first capital of the United States and was the nation's largest city by 1790. Successive waves of immigration — Irish, Italian, Eastern European Jewish, Puerto Rican, Chinese, and countless others — shaped New York into the most culturally diverse metropolis on Earth. Today the city of 8.3 million people speaks more than 800 languages.",
+    "famousPeople": [
+      "Franklin D. Roosevelt – 32nd President, born in Hyde Park, New York",
+      "Jay-Z – hip-hop mogul raised in Marcy Houses, Brooklyn",
+      "Lady Gaga – pop icon born in Manhattan's Upper West Side",
+      "Lou Gehrig – Yankees legend raised in Manhattan",
+      "Kareem Abdul-Jabbar – NBA Hall of Famer born in Harlem",
+      "Jennifer Lopez – actress and singer from the Bronx"
+    ],
+    "attractions": [
+      "Central Park",
+      "Statue of Liberty & Ellis Island",
+      "The Metropolitan Museum of Art",
+      "Times Square",
+      "Brooklyn Bridge",
+      "High Line Park"
+    ],
+    "funFact": "New York City has more than 468 miles of subway track — enough to stretch from NYC to Detroit — making it one of the longest metro systems in the world."
+  },
+  {
+    "name": "Los Angeles",
+    "state": "CA",
+    "history": "Founded in 1781 by Spanish colonial governor Felipe de Neve as 'El Pueblo de la Reina de Los Angeles,' L.A. remained a sleepy ranching outpost until the arrival of the transcontinental railroad in 1876. The discovery of oil in 1892 and the birth of the film industry in the early 1900s catapulted it to global prominence. Today Greater Los Angeles is home to over 13 million people and the world's entertainment capital.",
+    "famousPeople": [
+      "Serena Williams – tennis GOAT, raised in Compton",
+      "Dr. Dre – hip-hop producer and entrepreneur from Compton",
+      "Billie Eilish – Grammy-winning artist, born and raised in Highland Park",
+      "Tiger Woods – golf legend born in Cypress",
+      "Leonardo DiCaprio – actor and environmentalist, native Angeleno"
+    ],
+    "attractions": [
+      "Griffith Observatory",
+      "Getty Center",
+      "Venice Beach Boardwalk",
+      "The Hollywood Walk of Fame",
+      "LACMA – Los Angeles County Museum of Art",
+      "The Getty Villa (Malibu)"
+    ],
+    "funFact": "Los Angeles is the only city in the world to have hosted the Summer Olympics twice (1932 and 1984) and is set to host a third time in 2028."
+  },
+  {
+    "name": "Fairfax",
+    "state": "VA",
+    "history": "Fairfax County, established in 1742, played a central role in early American history as home to George Mason, author of the Virginia Declaration of Rights — a foundational document for the U.S. Bill of Rights. The independent City of Fairfax, incorporated in 1961, grew dramatically during the Cold War as federal agencies and defense contractors clustered in Northern Virginia. Today it anchors one of the most educated and highest-income metropolitan areas in the country.",
+    "famousPeople": [
+      "George Mason – Founding Father and author of the Virginia Declaration of Rights",
+      "T.C. Williams – educator who inspired the film 'Remember the Titans'",
+      "Dave Brat – economist and politician from the region",
+      "Jim Moran – longtime U.S. Congressman representing Northern Virginia"
+    ],
+    "attractions": [
+      "George Mason University",
+      "Fairfax City Historic District",
+      "National Firearms Museum",
+      "Meadowlark Botanical Gardens",
+      "Burke Lake Park",
+      "Mosaic District Shopping & Dining"
+    ],
+    "funFact": "Fairfax County is home to more Fortune 500 companies per capita than any other jurisdiction in Virginia, and Dulles Technology Corridor is known as the internet's east-coast backbone."
+  },
+  {
+    "name": "Boston",
+    "state": "MA",
+    "history": "Founded in 1630 by Puritan settlers, Boston is one of the oldest cities in the United States and the cradle of American liberty. The Boston Massacre (1770), the Boston Tea Party (1773), and the Battles of Lexington and Concord (1775) all ignited the American Revolution. Home to the country's first public school (1635) and first public library, Boston became the intellectual heart of a new nation. Today it is a global center for education, medicine, and biotechnology.",
+    "famousPeople": [
+      "John F. Kennedy – 35th U.S. President, born in Brookline",
+      "Benjamin Franklin – Founding Father and polymath, born in Boston",
+      "Edgar Allan Poe – Gothic writer born in Boston",
+      "Mark Wahlberg – actor and producer from Dorchester",
+      "Matt Damon & Ben Affleck – Oscar-winning screenwriters from Cambridge and Boston"
+    ],
+    "attractions": [
+      "Freedom Trail (16 historic sites in 2.5 miles)",
+      "Fenway Park",
+      "Museum of Fine Arts",
+      "Harvard University & MIT in Cambridge",
+      "Boston Common & Public Garden",
+      "New England Aquarium"
+    ],
+    "funFact": "Boston installed the first subway system in the United States in 1897. The MBTA Green Line tunnels underneath Boylston Street are the oldest active rail tunnel in the Western Hemisphere."
+  },
+  {
+    "name": "Miami",
+    "state": "FL",
+    "history": "Incorporated as a city in 1896 — just 502 years after Columbus's arrival — Miami was one of the last major American cities to be formally founded. Julia Tuttle, a Cleveland businesswoman, persuaded railroad magnate Henry Flagler to extend his Florida East Coast Railway to the area. The city's fortunes soared with the 1959 Cuban Revolution, which brought a wave of Cuban exiles who transformed Miami into a bilingual, bicultural powerhouse. Today it is the financial and cultural gateway to Latin America.",
+    "famousPeople": [
+      "Gloria Estefan – Cuban-American pop icon who made her career in Miami",
+      "LeBron James – NBA legend who brought two championships to the Miami Heat",
+      "Enrique Iglesias – Latin pop superstar based in Miami",
+      "Pitbull – rapper and entrepreneur born in Miami",
+      "Dwyane Wade – Heat legend who called Miami home for most of his career"
+    ],
+    "attractions": [
+      "Art Deco Historic District in South Beach",
+      "Vizcaya Museum & Gardens",
+      "Wynwood Walls (outdoor street art)",
+      "Everglades National Park day trips",
+      "Perez Art Museum Miami (PAMM)",
+      "Little Havana – Calle Ocho"
+    ],
+    "funFact": "Miami is the only major U.S. city founded by a woman. Julia Tuttle convinced Henry Flagler to build his railroad south after a devastating 1894-95 freeze destroyed citrus crops elsewhere in Florida."
+  },
+  {
+    "name": "Atlanta",
+    "state": "GA",
+    "history": "Founded in 1837 as the terminus of the Western & Atlantic Railroad, Atlanta was originally named Terminus. The city was nearly completely destroyed by General Sherman's march through Georgia in 1864 during the Civil War, yet rebuilt with remarkable speed. Atlanta became the birthplace of the Civil Rights Movement — the birthplace of Dr. Martin Luther King Jr. — and hosted the 1996 Summer Olympics. Today it is the economic capital of the American South, home to Hartsfield-Jackson, the world's busiest airport.",
+    "famousPeople": [
+      "Martin Luther King Jr. – Civil Rights leader born in Sweet Auburn neighborhood",
+      "Jimmy Carter – 39th U.S. President, from nearby Plains, GA",
+      "Usher – R&B superstar who grew up in Atlanta",
+      "Tyler Perry – filmmaker and studio founder",
+      "Outkast – Andre 3000 & Big Boi, iconic Atlanta hip-hop duo"
+    ],
+    "attractions": [
+      "National Center for Civil and Human Rights",
+      "Georgia Aquarium (largest in the Western Hemisphere)",
+      "Martin Luther King Jr. National Historic Site",
+      "World of Coca-Cola",
+      "Centennial Olympic Park",
+      "Ponce City Market"
+    ],
+    "funFact": "Atlanta has more trees per capita than almost any other major city in the world. Locals call it 'the city in a forest' — tree canopy covers roughly 47% of its land area."
+  },
+  {
+    "name": "Seattle",
+    "state": "WA",
+    "history": "Named after Chief Si'ahl of the Duwamish and Suquamish tribes, Seattle was incorporated in 1869. The 1897 Klondike Gold Rush transformed it into a booming supply hub for prospectors heading to Alaska. The city was rebuilt after the Great Seattle Fire of 1889, this time elevated up to 22 feet above the original street level — creating the underground city tours popular today. Boeing, Microsoft, Amazon, and Starbucks all grew from Seattle's soil, making it one of the great innovation cities of the modern era.",
+    "famousPeople": [
+      "Jimi Hendrix – rock guitar legend born in Seattle",
+      "Bill Gates – Microsoft co-founder and philanthropist, Seattle native",
+      "Jeff Bezos – Amazon founder who built his empire in Seattle",
+      "Kurt Cobain – Nirvana frontman born in Aberdeen, shaped Seattle's grunge scene",
+      "Bruce Lee – martial arts icon raised partly in Seattle"
+    ],
+    "attractions": [
+      "Pike Place Market",
+      "Space Needle",
+      "Chihuly Garden and Glass",
+      "Museum of Pop Culture (MoPOP)",
+      "Kerry Park viewpoint",
+      "Olympic Sculpture Park"
+    ],
+    "funFact": "Seattle residents consume more coffee per capita than any other U.S. city — home to Starbucks (founded 1971) and hundreds of independent roasters — yet statistically the city is not even among the top ten rainiest cities in America."
+  },
+  {
+    "name": "Houston",
+    "state": "TX",
+    "history": "Founded in 1837 by brothers Augustus and John Allen who bought 6,642 acres of swampy land and named it after General Sam Houston. The discovery of oil at Spindletop in 1901 set the city on a trajectory of explosive growth. NASA's Johnson Space Center, established in 1961, brought a new identity — Mission Control for every American human spaceflight program since Gemini. Today Houston is the most ethnically diverse major city in the United States.",
+    "famousPeople": [
+      "Beyonce – global music icon born and raised in Houston's Third Ward",
+      "Travis Scott – rapper from Houston's Missouri City suburb",
+      "Howard Hughes – aviation pioneer and billionaire, native Houstonian",
+      "Dennis Quaid – actor born in Houston",
+      "Hakeem Olajuwon – NBA Hall of Famer who became 'The Dream' with the Rockets"
+    ],
+    "attractions": [
+      "NASA Johnson Space Center",
+      "The Museum of Fine Arts, Houston",
+      "Space Center Houston",
+      "Buffalo Bayou Park",
+      "Houston Zoo",
+      "Kemah Boardwalk"
+    ],
+    "funFact": "Houston is home to the world's largest medical complex — the Texas Medical Center — which employs more than 106,000 people across 60 institutions and treats over 10 million patients a year."
+  },
+  {
+    "name": "San Francisco",
+    "state": "CA",
+    "history": "Founded in 1776 as Mission Dolores by Spanish Franciscan missionaries, San Francisco was a tiny outpost until the 1849 Gold Rush transformed it into a boomtown almost overnight. By 1850 its population had exploded from 1,000 to 25,000. The catastrophic earthquake and fire of 1906 destroyed 80% of the city, yet San Francisco rebuilt within a decade. The city became the center of the Beat Generation in the 1950s, the counterculture Summer of Love in 1967, and later the LGBTQ rights movement. Today it is the gateway to Silicon Valley and one of the most visited cities on Earth.",
+    "famousPeople": [
+      "Steve Jobs – Apple co-founder who revolutionized technology from the Bay Area",
+      "Joe DiMaggio – Yankees legend and national hero, born in Martinez, raised in San Francisco",
+      "Janis Joplin – rock icon who launched her career in Haight-Ashbury",
+      "Jerry Garcia – Grateful Dead frontman, born and raised in San Francisco",
+      "Nancy Pelosi – former Speaker of the House, longtime San Francisco congresswoman",
+      "Robin Williams – comedian and actor who grew up in nearby Tiburon"
+    ],
+    "attractions": [
+      "Golden Gate Bridge",
+      "Alcatraz Island",
+      "Fisherman's Wharf & Ghirardelli Square",
+      "Chinatown (oldest in North America)",
+      "Cable Cars (National Historic Landmarks)",
+      "Golden Gate Park & de Young Museum",
+      "Lombard Street (the crookedest street)"
+    ],
+    "funFact": "San Francisco's famous cable cars are the only moving National Historic Landmarks in the United States. They have been hauling passengers up the city's legendary hills since 1873."
+  },
+  {
+    "name": "Phoenix",
+    "state": "AZ",
+    "history": "Named after the mythological bird that rises from ashes, Phoenix was established in 1867 on the ruins of a Hohokam Native American canal system — settlers literally resurrected ancient irrigation channels to farm the desert. Incorporated in 1881, the city remained modest until widespread air conditioning adoption after World War II made the Sonoran Desert livable year-round. Phoenix is now the fifth-largest city in the United States and the only state capital with over one million residents.",
+    "famousPeople": [
+      "Alice Cooper – shock rock legend born in Detroit but raised and based in Phoenix",
+      "Emma Stone – Oscar-winning actress born in Scottsdale",
+      "Stevie Nicks – Fleetwood Mac icon born in Phoenix",
+      "David Spade – comedian and actor, born in Birmingham but raised in Scottsdale",
+      "Lynda Carter – original Wonder Woman actress, born in Phoenix"
+    ],
+    "attractions": [
+      "Desert Botanical Garden",
+      "Camelback Mountain and Echo Canyon Trail",
+      "Musical Instrument Museum",
+      "Heard Museum (Native American art and history)",
+      "South Mountain Park (largest municipal park in the US)",
+      "Taliesin West (Frank Lloyd Wright's winter home)"
+    ],
+    "funFact": "Phoenix averages 299 sunny days per year — more sunshine annually than Miami, Los Angeles, or Honolulu. It is also the hottest major city in the United States, regularly hitting 110°F in summer."
+  },
+  {
+    "name": "Philadelphia",
+    "state": "PA",
+    "history": "Founded by William Penn in 1682 as a haven of religious tolerance for Quakers, Philadelphia was the largest and most important city in colonial America. The Declaration of Independence was signed here on July 4, 1776, and the U.S. Constitution was drafted in this city in 1787. Philadelphia served as the nation's capital from 1790 to 1800. It was also a major hub of the Underground Railroad and the abolitionist movement. Today it is America's sixth-largest city.",
+    "famousPeople": [
+      "Benjamin Franklin – Founding Father, inventor, and diplomat who made Philadelphia his home",
+      "Will Smith – actor and rapper from West Philadelphia",
+      "Kevin Hart – comedian born and raised in North Philadelphia",
+      "Tina Fey – actress, writer, and producer from Upper Darby",
+      "Patti LaBelle – R&B legend born in Philadelphia",
+      "Kobe Bryant – NBA legend who grew up in the Philadelphia suburbs"
+    ],
+    "attractions": [
+      "Independence Hall (UNESCO World Heritage Site)",
+      "Liberty Bell Center",
+      "Philadelphia Museum of Art (Rocky Steps)",
+      "Reading Terminal Market",
+      "Eastern State Penitentiary",
+      "Barnes Foundation",
+      "South Street & Italian Market"
+    ],
+    "funFact": "Philadelphia has the largest outdoor mural program in the world — over 4,000 murals painted throughout the city, earning it the nickname 'The City of Murals.'"
+  },
+  {
+    "name": "San Antonio",
+    "state": "TX",
+    "history": "Founded in 1718 by Spanish colonizers, San Antonio is one of the oldest cities in Texas and was the largest city in the state for much of its early history. The Battle of the Alamo in February-March 1836, where a small band of Texan defenders held off the Mexican army for 13 days before being overrun, became the defining rallying cry of the Texas Revolution. The mission complex, including the Alamo, is now a UNESCO World Heritage Site. Today San Antonio is the seventh-largest U.S. city.",
+    "famousPeople": [
+      "Henry Cisneros – Secretary of HUD under President Clinton, former San Antonio mayor",
+      "Tim Duncan – NBA Hall of Famer who won five championships with the San Antonio Spurs",
+      "Joan Crawford – Hollywood legend born in San Antonio",
+      "Carol Burnett – beloved comedian and actress, born in San Antonio",
+      "Greg Popovich – legendary Spurs coach, five-time NBA champion"
+    ],
+    "attractions": [
+      "The Alamo",
+      "San Antonio River Walk (Paseo del Rio)",
+      "San Antonio Missions (UNESCO World Heritage Site)",
+      "Pearl District and Hotel Emma",
+      "SeaWorld San Antonio",
+      "Natural Bridge Caverns"
+    ],
+    "funFact": "The San Antonio River Walk sits about 20 feet below street level. In 1921 the city considered paving it over; instead, architect Robert Hugman proposed the beloved walkway that now draws 11 million visitors a year — more than the Grand Canyon."
+  },
+  {
+    "name": "San Diego",
+    "state": "CA",
+    "history": "The site of the first European settlement in California, San Diego was founded in 1769 when Father Junipero Serra established Mission San Diego de Alcala. The city grew slowly under Spanish and Mexican rule before the Mexican-American War brought it under U.S. control in 1846. The arrival of the transcontinental railroad in 1885 sparked growth, but it was World War II that transformed San Diego: the Navy expanded its Pacific Fleet headquarters here, creating a massive military presence that defines the city to this day.",
+    "famousPeople": [
+      "Ted Williams – greatest hitter in baseball history, born in San Diego",
+      "Gregory Peck – Oscar-winning actor born in La Jolla",
+      "Raquel Welch – actress and sex symbol born in San Diego",
+      "Bill Walton – NBA Hall of Famer and broadcaster from La Mesa",
+      "Adam Driver – Star Wars actor born in San Diego"
+    ],
+    "attractions": [
+      "Balboa Park (17 museums, free to explore grounds)",
+      "San Diego Zoo (one of the world's best)",
+      "USS Midway Aircraft Carrier Museum",
+      "Gaslamp Quarter historic district",
+      "La Jolla Cove and sea caves",
+      "Torrey Pines State Natural Reserve",
+      "Old Town San Diego State Historic Park"
+    ],
+    "funFact": "San Diego has the most perfect climate of any major American city — average temperatures stay between 57°F in winter and 76°F in summer, with fewer than 40 cloudy days per year, earning it the title 'America's Finest City.'"
+  },
+  {
+    "name": "Dallas",
+    "state": "TX",
+    "history": "Founded in 1841 by John Neely Bryan on the banks of the Trinity River, Dallas grew explosively with the arrival of two major railroads in 1872-73, cementing its role as a commercial hub for the entire Southwest. The discovery of oil in East Texas in 1930 transformed it into a financial powerhouse. Dallas gained tragic international fame on November 22, 1963, when President John F. Kennedy was assassinated in Dealey Plaza during a motorcade. Today Dallas is the anchor of the fourth-largest metropolitan area in the United States.",
+    "famousPeople": [
+      "Erykah Badu – neo-soul icon born and raised in Dallas",
+      "Jessica Simpson – singer and entrepreneur from Abilene, raised in Dallas",
+      "Norah Jones – Grammy-winning musician born in Dallas",
+      "Larry Hagman – J.R. Ewing of Dallas, grew up in nearby Weatherford",
+      "Demi Lovato – pop star and actress from Dallas"
+    ],
+    "attractions": [
+      "Sixth Floor Museum at Dealey Plaza (JFK assassination site)",
+      "Dallas Arboretum and Botanical Garden",
+      "Perot Museum of Nature and Science",
+      "Deep Ellum arts and music district",
+      "Dallas Museum of Art (free admission)",
+      "AT&T Stadium in Arlington",
+      "Reunion Tower observation deck"
+    ],
+    "funFact": "Dallas has more restaurants per capita than New York City, with over 9,500 dining establishments in the metro area. It also has more shopping centers per capita than any other American city."
+  },
+  {
+    "name": "San Jose",
+    "state": "CA",
+    "history": "Founded in 1777 by Spanish colonists as California's first civilian pueblo, San Jose served briefly as California's first state capital in 1849-1851. For most of the 19th and early 20th centuries it was a quiet agricultural center known as the 'Valley of Heart's Delight' for its vast fruit orchards. Everything changed in the second half of the 20th century: Hewlett-Packard, Intel, Apple, Cisco, and eBay all planted roots nearby, transforming the region into Silicon Valley and San Jose into the capital of the global tech economy.",
+    "famousPeople": [
+      "Steve Wozniak – Apple co-founder and inventor of the personal computer",
+      "Pat Tillman – NFL player who left his career to join the Army Rangers after 9/11",
+      "Angela Bassett – Emmy-winning actress raised in St. Petersburg but closely associated with Bay Area",
+      "Brandi Chastain – Olympic gold medalist soccer player from San Jose",
+      "Kevin Mitnick – world's most famous hacker, based in the Bay Area"
+    ],
+    "attractions": [
+      "Winchester Mystery House",
+      "Tech Museum of Innovation",
+      "San Jose Museum of Art",
+      "Rosicrucian Egyptian Museum",
+      "Santana Row shopping and dining district",
+      "Happy Hollow Park & Zoo",
+      "History Park at Kelley Park"
+    ],
+    "funFact": "The Winchester Mystery House was built continuously for 38 years by Sarah Winchester, the rifle heiress, who believed non-stop construction would ward off ghosts. The mansion has 160 rooms, 2,000 doors, and staircases that lead directly into ceilings."
+  },
+  {
+    "name": "Austin",
+    "state": "TX",
+    "history": "Named after Stephen F. Austin, the 'Father of Texas,' Austin became the permanent state capital in 1839. The University of Texas at Austin, established in 1883, anchored the city's intellectual identity. Beginning in the 1970s, Austin cultivated a legendary live music scene on 6th Street and around clubs like the Armadillo World Headquarters, earning the title 'Live Music Capital of the World.' In the 2010s a tech migration brought Apple, Tesla, Oracle, and hundreds of startups, transforming Austin into one of America's most dynamic cities.",
+    "famousPeople": [
+      "Matthew McConaughey – Oscar-winning actor who has called Austin home for decades",
+      "Sandra Bullock – actress and producer who adopted Austin as her city",
+      "Michael Dell – Dell Technologies founder who started the company in his UT Austin dorm room",
+      "Willie Nelson – country music outlaw who made Austin his spiritual home",
+      "Janis Joplin – blues-rock legend who performed at Austin's first major venues"
+    ],
+    "attractions": [
+      "South by Southwest (SXSW) Festival (March)",
+      "6th Street Live Music Entertainment District",
+      "Barton Springs Pool (natural spring-fed swimming hole)",
+      "Texas State Capitol",
+      "Zilker Park and Barton Creek Greenbelt",
+      "LBJ Presidential Library",
+      "Congress Avenue Bridge Bat Colony viewing"
+    ],
+    "funFact": "The Congress Avenue Bridge is home to 1.5 million Mexican free-tailed bats — the largest urban bat colony in North America. Each evening from March to November they emerge in a swirling, mile-long cloud visible from downtown Austin."
+  },
+  {
+    "name": "Jacksonville",
+    "state": "FL",
+    "history": "The site was settled by French Huguenots in 1564, making it one of the oldest European settlements in North America. Named after President Andrew Jackson, the city was incorporated in 1832 and grew as a major port on the St. Johns River. In 1968, Jacksonville consolidated its government with Duval County, becoming by a wide margin the largest city by land area in the contiguous United States. The city has a strong military presence, home to three major naval installations.",
+    "famousPeople": [
+      "Lynyrd Skynyrd – iconic Southern rock band formed in Jacksonville in 1964",
+      "Ronnie Van Zant – Lynyrd Skynyrd's legendary frontman, born and raised in Jacksonville",
+      "Fred Durst – Limp Bizkit frontman from Jacksonville",
+      "Pat Sajak – Wheel of Fortune host who spent time in Jacksonville early in his career",
+      "Tony Boselli – Pro Football Hall of Fame offensive lineman from Jacksonville Jaguars"
+    ],
+    "attractions": [
+      "Jacksonville Zoo and Gardens",
+      "Cummer Museum of Art and Gardens",
+      "Timucuan Ecological and Historic Preserve",
+      "Museum of Science and History (MOSH)",
+      "Atlantic Beach, Neptune Beach, and Jacksonville Beach",
+      "Riverside Arts Market",
+      "Fort Caroline National Memorial"
+    ],
+    "funFact": "Jacksonville is the largest city by land area in the contiguous United States — at 747 square miles, it's larger than Los Angeles, New York City, and Chicago combined. It achieved this size in 1968 when the city merged with surrounding Duval County."
+  },
+  {
+    "name": "Fort Worth",
+    "state": "TX",
+    "history": "Established in 1849 as a U.S. Army outpost on the Trinity River, Fort Worth earned the nickname 'Cowtown' as the last major stop on the Chisholm Trail cattle drives northward from Texas to Kansas. The city's district known as Hell's Half Acre was notorious for saloons, gambling, and outlaws including Butch Cassidy and the Sundance Kid. The discovery of oil in nearby Ranger in 1917 transformed its economy. Today Fort Worth is a sophisticated city of world-class museums, ranch culture, and the only twice-daily cattle drive in the world.",
+    "famousPeople": [
+      "Van Cliburn – classical pianist who won the first International Tchaikovsky Competition in Moscow in 1958",
+      "Betty Buckley – Tony Award-winning Broadway star from Fort Worth",
+      "Kay Bailey Hutchison – former U.S. Senator from Texas",
+      "Tim Love – celebrity chef who put Fort Worth on the culinary map",
+      "Sam Rayburn – legendary Speaker of the House from nearby Bonham, TX"
+    ],
+    "attractions": [
+      "Fort Worth Stockyards National Historic District",
+      "Kimbell Art Museum (Louis Kahn masterpiece)",
+      "Modern Art Museum of Fort Worth",
+      "Amon Carter Museum of American Art",
+      "Sundance Square entertainment district",
+      "National Cowgirl Museum and Hall of Fame"
+    ],
+    "funFact": "Fort Worth is the only city in the world with a twice-daily working cattle drive. Every day at 11:30am and 4pm, longhorn cattle are driven down Exchange Avenue in the historic Stockyards, keeping alive a tradition from the 1860s."
+  },
+  {
+    "name": "Columbus",
+    "state": "OH",
+    "history": "Established in 1812 as Ohio's state capital, Columbus was chosen for its central geographic location. Ohio State University was founded here in 1870, anchoring a culture of research and innovation. Unlike many Rust Belt cities, Columbus diversified its economy early through healthcare, education, and government, and has grown steadily. Today it is the fastest-growing large city in the Midwest, home to a vibrant Short North arts district and a booming tech sector.",
+    "famousPeople": [
+      "John Glenn – first American to orbit the Earth, born in nearby Cambridge, Ohio",
+      "Jack Nicklaus – the 'Golden Bear,' greatest golfer of all time, born in Columbus",
+      "Archie Griffin – only two-time Heisman Trophy winner in college football history",
+      "James Thurber – beloved American humorist and cartoonist, born in Columbus",
+      "George Bellows – acclaimed American painter born in Columbus"
+    ],
+    "attractions": [
+      "Ohio State University campus (The Horseshoe stadium)",
+      "Short North Arts District",
+      "COSI Columbus science museum",
+      "Columbus Zoo and Aquarium",
+      "Franklin Park Conservatory and Botanical Gardens",
+      "German Village historic neighborhood",
+      "Nationwide Arena"
+    ],
+    "funFact": "Ohio Stadium at Ohio State University — nicknamed 'The Horseshoe' — is the largest stadium in the United States by capacity, holding 102,780 fans. On game day it becomes Ohio's fourth-largest city."
+  },
+  {
+    "name": "Indianapolis",
+    "state": "IN",
+    "history": "Indianapolis was purpose-built as Indiana's state capital in 1820, laid out on a symmetrical grid plan modeled on Washington D.C. The city rose to fame through manufacturing, and when the auto industry boomed in the early 1900s, the Indianapolis Motor Speedway was built in 1909. The first Indianapolis 500 was run in 1911 and became the world's largest single-day sporting event. Today Indianapolis reinvented itself after manufacturing's decline into a major convention, healthcare, and logistics hub.",
+    "famousPeople": [
+      "Benjamin Harrison – 23rd U.S. President, lived in Indianapolis and is buried there",
+      "Kurt Vonnegut – Slaughterhouse-Five author and cultural icon, born in Indianapolis",
+      "David Letterman – late-night TV legend who attended Ball State near Indianapolis",
+      "Reggie Miller – Indiana Pacers legend and NBA Hall of Famer",
+      "Ryan White – AIDS activist whose story changed America's understanding of HIV"
+    ],
+    "attractions": [
+      "Indianapolis Motor Speedway & Hall of Fame Museum",
+      "Children's Museum of Indianapolis (world's largest)",
+      "Indianapolis Museum of Art at Newfields",
+      "Indiana War Memorial and Military Park",
+      "White River State Park",
+      "Indianapolis Zoo",
+      "Soldiers and Sailors Monument"
+    ],
+    "funFact": "The Children's Museum of Indianapolis is the world's largest children's museum — 472,900 square feet spread over five floors, featuring a real dinosaur skeleton emerging through the roof of the building."
+  },
+  {
+    "name": "Charlotte",
+    "state": "NC",
+    "history": "Named after Queen Charlotte of Mecklenburg-Strelitz, wife of King George III, Charlotte was founded in 1768. In 1799, twelve-year-old Conrad Reed found a 17-pound gold nugget on his family's farm nearby — the first documented gold discovery in U.S. history. The city hosted the first U.S. Branch Mint in 1837. Today Charlotte is the largest city in North Carolina and the second-largest banking center in the United States after New York City, home to Bank of America's headquarters and Wells Fargo's East Coast hub.",
+    "famousPeople": [
+      "Steph Curry – two-time NBA MVP and four-time champion, born in Charlotte",
+      "James K. Polk – 11th U.S. President, born in Pineville just south of Charlotte",
+      "Dale Earnhardt Jr. – NASCAR legend and beloved figure from nearby Mooresville",
+      "Fantasia Barrino – American Idol winner and Broadway star from High Point, NC",
+      "Charles Kuralt – legendary CBS journalist born in Wilmington, worked in Charlotte"
+    ],
+    "attractions": [
+      "NASCAR Hall of Fame",
+      "Carowinds theme park (straddles the NC/SC border)",
+      "Billy Graham Library",
+      "U.S. National Whitewater Center",
+      "Charlotte Motor Speedway",
+      "Discovery Place Science Museum",
+      "Fourth Ward historic neighborhood"
+    ],
+    "funFact": "The first gold rush in United States history happened near Charlotte in 1799 — 50 years before the California Gold Rush. Conrad Reed's family used a 17-pound gold nugget as a doorstop for three years before discovering its value."
+  },
+  {
+    "name": "Denver",
+    "state": "CO",
+    "history": "Founded in 1858 as a supply camp during the Pikes Peak Gold Rush, Denver became Colorado's territorial capital in 1867 and state capital when Colorado achieved statehood in 1876. Sitting exactly 5,280 feet above sea level, it earned the nickname 'the Mile High City.' The city boomed in the late 20th century as a hub for energy, aerospace, and outdoor recreation, attracting waves of residents drawn by access to the Rocky Mountains and 300 days of sunshine annually.",
+    "famousPeople": [
+      "Douglas Fairbanks – swashbuckling Hollywood legend born in Denver",
+      "Tim Allen – Home Improvement actor and comedian born in Denver",
+      "Jack Kerouac – wrote On the Road while living in Denver, immortalizing the city",
+      "Chauncey Billups – NBA champion from Denver who played for multiple teams",
+      "Roseanne Barr – comedian and actress born in Salt Lake City, raised partly in Denver"
+    ],
+    "attractions": [
+      "Red Rocks Amphitheatre (natural outdoor concert venue)",
+      "Denver Art Museum",
+      "Rocky Mountain National Park (75 miles away)",
+      "Denver Botanic Gardens",
+      "Union Station neighborhood",
+      "Larimer Square",
+      "Colorado State Capitol"
+    ],
+    "funFact": "The Colorado State Capitol building's dome is precisely 5,280 feet (exactly one mile) above sea level — the exact altitude is marked on the 13th step of the west entrance, confirmed by modern GPS measurements."
+  },
+  {
+    "name": "Nashville",
+    "state": "TN",
+    "history": "Founded in 1779 as Fort Nashborough during the American Revolution, Nashville grew steadily as Tennessee's capital. The city's identity was forever shaped in 1925 by WSM radio's 'Barn Dance' program — later renamed the Grand Ole Opry — which transformed it into the worldwide capital of country music. During the Civil Rights Movement, Nashville's 1960 lunch counter sit-ins were among the most disciplined and successful in the South, led by a generation of students who went on to change history.",
+    "famousPeople": [
+      "Taylor Swift – launched her career in Nashville and became the world's biggest pop star",
+      "Reese Witherspoon – Oscar-winning actress and producer born in New Orleans, raised in Nashville",
+      "Dolly Parton – country music legend who recorded her landmark albums in Nashville",
+      "Al Gore – former U.S. Vice President and Nobel Peace Prize winner, from Carthage near Nashville",
+      "Miley Cyrus – pop star raised in Nashville as daughter of country singer Billy Ray Cyrus"
+    ],
+    "attractions": [
+      "Country Music Hall of Fame and Museum",
+      "Grand Ole Opry",
+      "Ryman Auditorium (Mother Church of Country Music)",
+      "Honky Tonk Highway (Lower Broadway)",
+      "The Parthenon in Centennial Park",
+      "Johnny Cash Museum",
+      "Belle Meade Historic Site & Winery"
+    ],
+    "funFact": "Nashville is home to a full-scale, accurate replica of the ancient Greek Parthenon, built for the 1897 Tennessee Centennial Exposition. It is the only full-size replica of the Parthenon in the world and houses a 42-foot gold statue of Athena."
+  },
+  {
+    "name": "Las Vegas",
+    "state": "NV",
+    "history": "Las Vegas was a small railroad water stop until 1931, when Nevada legalized gambling and the Hoover Dam project brought thousands of workers to the region. The mob-backed Flamingo Hotel opened in 1946, cementing the city's identity as a destination for entertainment and excess. From the Rat Pack era of the 1950s to today's billion-dollar mega-resorts, Las Vegas reinvented the concept of entertainment. The Las Vegas Strip generates more annual gaming revenue than any other gambling destination on Earth.",
+    "famousPeople": [
+      "Andre Agassi – one of tennis's all-time greats, born and raised in Las Vegas",
+      "Wayne Newton – 'Mr. Las Vegas,' performed over 30,000 shows in the city",
+      "Penn & Teller – legendary magician-comedians who've held a Las Vegas residency for decades",
+      "Greg LeMond – three-time Tour de France winner who spent time in Las Vegas",
+      "Carrot Top – comedian who has held a long residency at the Luxor Hotel"
+    ],
+    "attractions": [
+      "The Strip (Las Vegas Boulevard)",
+      "Bellagio Hotel Fountains and Gallery of Fine Art",
+      "High Roller Observation Wheel",
+      "Fremont Street Experience",
+      "Neon Museum (Neon Boneyard)",
+      "Valley of Fire State Park",
+      "Hoover Dam (30 miles away)"
+    ],
+    "funFact": "Las Vegas is so brightly lit it is clearly visible from space and creates light pollution detectable 250 miles away. The hotels on the Strip collectively use enough electricity to power a small city — the Luxor's Sky Beam is the strongest light beam in the world."
+  },
+  {
+    "name": "Portland",
+    "state": "OR",
+    "history": "Founded in 1845, Portland's name was settled by a coin toss between its two founders — Francis Pettygrove (who wanted Portland, after his Maine hometown) and Asa Lovejoy (who favored Boston). Pettygrove won. The city became a key Pacific Northwest port and was notorious in the 1800s for 'Shanghaiing' — kidnapping unsuspecting people through underground tunnels to serve as sailors. Today Portland is celebrated for its progressive culture, independent food and coffee scene, and proximity to both the Pacific Ocean and Mt. Hood.",
+    "famousPeople": [
+      "Matt Groening – creator of The Simpsons, born in Portland; Springfield is based on Oregon towns",
+      "Gus Van Sant – acclaimed filmmaker of Good Will Hunting and My Own Private Idaho, based in Portland",
+      "Chuck Palahniuk – author of Fight Club, born in Pasco, WA, calls Portland home",
+      "Tonya Harding – figure skating champion whose dramatic story captivated America, from Portland",
+      "Carrie Brownstein – musician (Sleater-Kinney) and Portlandia co-creator"
+    ],
+    "attractions": [
+      "Powell's City of Books (world's largest independent bookstore)",
+      "International Rose Test Garden",
+      "Forest Park (5,200-acre urban forest)",
+      "Columbia River Gorge National Scenic Area",
+      "Portland Art Museum",
+      "Pearl District galleries and restaurants",
+      "Multnomah Falls (611 feet tall)"
+    ],
+    "funFact": "Portland has more breweries per capita than any other city in the United States — over 70 craft breweries within city limits have earned it the title 'Beervana.' The city also has the most strip clubs per capita of any U.S. city, an unusually well-known distinction."
+  },
+  {
+    "name": "Memphis",
+    "state": "TN",
+    "history": "Founded in 1819 on the Mississippi River bluffs, Memphis was a major cotton trading center before the Civil War. After the war, yellow fever epidemics in 1878 nearly wiped the city out. Memphis came back as the birthplace of the blues, rock and roll, and soul music — Sun Studio, Stax Records, and Hi Records all recorded music that changed the world. Tragically, Memphis was also where Dr. Martin Luther King Jr. was assassinated on April 4, 1968, at the Lorraine Motel, now the National Civil Rights Museum.",
+    "famousPeople": [
+      "Elvis Presley – the King of Rock and Roll, lived at Graceland in Memphis from 1957 until his death",
+      "B.B. King – the King of Blues, made Memphis's Beale Street his home",
+      "Justin Timberlake – pop superstar born in Memphis suburb of Shelby County",
+      "Isaac Hayes – Academy Award-winning soul musician and composer of the Shaft theme",
+      "Three 6 Mafia – pioneering hip-hop group from Memphis who won the Oscar for 'It's Hard Out Here for a Pimp'"
+    ],
+    "attractions": [
+      "Graceland (Elvis Presley's home and museum)",
+      "Beale Street Historic District",
+      "National Civil Rights Museum at the Lorraine Motel",
+      "Sun Studio (birthplace of rock and roll)",
+      "Stax Museum of American Soul Music",
+      "Memphis Zoo",
+      "Mud Island River Park"
+    ],
+    "funFact": "Sun Studio in Memphis is the birthplace of rock and roll — in 1954, a single tiny studio produced recordings by Elvis Presley, Johnny Cash, Jerry Lee Lewis, and Carl Perkins. All four artists famously recorded together there on December 4, 1956, in a session now called 'The Million Dollar Quartet.'"
+  },
+  {
+    "name": "Louisville",
+    "state": "KY",
+    "history": "Founded in 1778 by George Rogers Clark during the Revolutionary War, Louisville sits at the Falls of the Ohio — the only natural obstacle on the navigable Ohio River — which made it a critical commercial hub. The city became renowned for whiskey distilling, the Kentucky Derby (running annually since 1875), and Louisville Slugger baseball bats. Louisville was deeply divided during the Civil War; it remained in the Union but had strong Confederate sympathizers. Muhammad Ali, born Cassius Clay here in 1942, became the city's most famous son.",
+    "famousPeople": [
+      "Muhammad Ali – three-time heavyweight boxing champion and global humanitarian icon, born in Louisville",
+      "Jennifer Lawrence – Oscar-winning actress born in Louisville",
+      "Hunter S. Thompson – gonzo journalism pioneer born in Louisville",
+      "Diane Sawyer – legendary television journalist born in Glasgow, raised in Louisville",
+      "Colonel Harland Sanders – KFC founder, from Corbin, KY, but Louisville is where the brand was built"
+    ],
+    "attractions": [
+      "Kentucky Derby Museum at Churchill Downs",
+      "Muhammad Ali Center",
+      "Louisville Slugger Museum & Factory",
+      "Bourbon Trail and distillery tours",
+      "Louisville Zoo",
+      "Cave Hill Cemetery (Victorian masterpiece)",
+      "21c Museum Hotel (contemporary art)"
+    ],
+    "funFact": "Louisville produces more than 95% of the world's bourbon whiskey. There are currently over 9 million barrels of bourbon aging in Kentucky warehouses — more barrels than there are people in the state."
+  },
+  {
+    "name": "Baltimore",
+    "state": "MD",
+    "history": "Founded in 1729 and named after the Irish Baron of Baltimore, Baltimore was one of the most important ports in early American history, second only to New York in tonnage handled. During the War of 1812, British forces bombarded Fort McHenry for 25 hours but failed to capture it. Watching from a ship in the harbor, lawyer Francis Scott Key was so inspired that he wrote the poem that became the national anthem. Baltimore is also the birthplace of Babe Ruth, Edgar Allan Poe's literary home, and a city of distinctive rowhouse neighborhoods.",
+    "famousPeople": [
+      "Frederick Douglass – abolitionist, author, and statesman, born into slavery in Talbot County, escaped through Baltimore",
+      "Babe Ruth – greatest baseball player of all time, born in Baltimore",
+      "Edgar Allan Poe – spent much of his literary career in Baltimore and is buried there",
+      "Thurgood Marshall – first Black Supreme Court Justice, born in Baltimore",
+      "John Waters – cult filmmaker who celebrates Baltimore's quirks in films like Hairspray"
+    ],
+    "attractions": [
+      "Inner Harbor and National Aquarium",
+      "Fort McHenry National Monument",
+      "Babe Ruth Birthplace and Museum",
+      "Edgar Allan Poe House and Museum",
+      "Baltimore Museum of Art (largest Matisse collection in the world)",
+      "American Visionary Art Museum",
+      "Lexington Market (operating since 1782)"
+    ],
+    "funFact": "Baltimore's Lexington Market, founded in 1782, is the oldest continuously operating market in the United States — it has been open for business every single day for over 240 years, surviving wars, depressions, fires, and a pandemic."
+  },
+  {
+    "name": "Pittsburgh",
+    "state": "PA",
+    "history": "Founded at the confluence of the Allegheny and Monongahela rivers to form the Ohio River, Pittsburgh was a crucial strategic fort town from 1758. By the late 19th century, Andrew Carnegie's steel empire produced more steel than all of Great Britain combined, making Pittsburgh the undisputed steel capital of the world. After steel's collapse in the 1980s devastated the city, Pittsburgh executed one of the most remarkable urban reinventions in American history, becoming a global leader in healthcare, robotics, and artificial intelligence.",
+    "famousPeople": [
+      "Andrew Carnegie – 'The Steel King' who became America's greatest philanthropist, built his empire in Pittsburgh",
+      "Andy Warhol – pop art legend born in Pittsburgh's Oakland neighborhood",
+      "Fred Rogers – Mister Rogers' Neighborhood creator and beloved national figure, born in Latrobe near Pittsburgh",
+      "August Wilson – two-time Pulitzer Prize-winning playwright, born in Pittsburgh's Hill District",
+      "Roberto Clemente – Puerto Rican baseball legend and humanitarian who played his entire career for the Pirates"
+    ],
+    "attractions": [
+      "Andy Warhol Museum",
+      "Carnegie Museums of Pittsburgh (natural history and art)",
+      "Fallingwater (Frank Lloyd Wright masterpiece, 90 minutes away)",
+      "Mount Washington and the Duquesne Incline",
+      "Heinz History Center",
+      "Point State Park at the three rivers confluence",
+      "Phipps Conservatory and Botanical Gardens"
+    ],
+    "funFact": "Pittsburgh has 446 bridges — more than any other city in the world, including Venice, Italy. The bridges are so numerous that Pittsburgh is sometimes called 'The City of Bridges,' and most of them are painted the same golden-yellow color."
+  },
+  {
+    "name": "Minneapolis",
+    "state": "MN",
+    "history": "Built around St. Anthony Falls — the only natural waterfall on the Mississippi River — Minneapolis grew rapidly in the 1880s as the flour milling capital of the world. Mills owned by Pillsbury and Washburn-Crosby (later General Mills) ground more flour here than anywhere on Earth. The city merged with its twin city St. Paul and today anchors a thriving metropolitan area known for its arts scene, progressive politics, and notoriously brutal winters. Minneapolis is home to more Fortune 500 company headquarters per capita than any other U.S. metropolitan area.",
+    "famousPeople": [
+      "Prince – music legend, born and raised in Minneapolis, recorded all his music at Paisley Park studio",
+      "Bob Dylan – born Robert Zimmerman in Duluth, MN, launched his career playing Minneapolis coffeehouses",
+      "F. Scott Fitzgerald – The Great Gatsby author born in St. Paul, came of age in Minneapolis",
+      "Judy Garland – The Wizard of Oz star, born in Grand Rapids, MN",
+      "Charles Schulz – Peanuts creator born in Minneapolis"
+    ],
+    "attractions": [
+      "Minnehaha Falls and Regional Park",
+      "Walker Art Center and Minneapolis Sculpture Garden",
+      "First Avenue music venue (immortalized in Purple Rain)",
+      "Mill City Museum (built into ruins of a historic flour mill)",
+      "Mall of America in Bloomington",
+      "Chain of Lakes (Minneapolis's crown jewels)",
+      "Weisman Art Museum (Frank Gehry design)"
+    ],
+    "funFact": "Minneapolis has more theater seats per capita than any American city outside New York City. The city also has more golfers per capita than any other U.S. city — impressive for a place with five months of winter."
+  },
+  {
+    "name": "New Orleans",
+    "state": "LA",
+    "history": "Founded by the French in 1718 and named after the Duke of Orleans, New Orleans passed to Spain in 1762, returned to France in 1800, and was sold to the United States in the Louisiana Purchase of 1803. Its unique blend of French, Spanish, African, Caribbean, and American cultures produced jazz music, Creole and Cajun cuisine, and Mardi Gras. Hurricane Katrina's catastrophic flooding in 2005 tested the city's spirit unlike anything since; New Orleans rebuilt with remarkable resilience and cultural pride.",
+    "famousPeople": [
+      "Louis Armstrong – the Father of Jazz, born in New Orleans' Back o' Town neighborhood",
+      "Fats Domino – rock and roll pioneer who recorded 'Blueberry Hill' in New Orleans",
+      "Lil Wayne – rap legend born Dwayne Michael Carter Jr. in New Orleans' 17th Ward",
+      "Mahalia Jackson – the Queen of Gospel, born in New Orleans",
+      "Truman Capote – In Cold Blood author born in New Orleans",
+      "Anne Rice – Interview with the Vampire author who set her Gothic stories in New Orleans"
+    ],
+    "attractions": [
+      "French Quarter and Bourbon Street",
+      "Jackson Square and St. Louis Cathedral",
+      "Garden District Victorian mansions",
+      "Preservation Hall (traditional jazz nightly)",
+      "National World War II Museum",
+      "Audubon Zoo and Nature Institute",
+      "Mardi Gras (Fat Tuesday celebration)"
+    ],
+    "funFact": "Parts of New Orleans sit 6 to 8 feet below sea level, and the city is slowly sinking at about 1 inch per year. It is kept dry by the largest drainage system in the world — 148 massive pumps capable of moving 24 billion gallons of water per day."
+  },
+  {
+    "name": "Raleigh",
+    "state": "NC",
+    "history": "Established in 1792 as North Carolina's state capital, Raleigh was named after Sir Walter Raleigh, the English explorer who sponsored the failed Roanoke Colony in the 1580s. In 1959, the Research Triangle Park was established between Raleigh, Durham, and Chapel Hill, becoming one of the world's most successful planned research parks. Today Raleigh is consistently ranked among the best places to live in the United States and is one of the fastest-growing large cities in the country.",
+    "famousPeople": [
+      "Andrew Johnson – 17th U.S. President, born in Raleigh in a small house that no longer stands",
+      "Thelonius Monk – jazz piano legend born in Rocky Mount, NC, grew up in New York but has deep NC roots",
+      "Clay Aiken – American Idol runner-up born in Raleigh",
+      "Ava Gardner – Hollywood actress born in Johnston County near Raleigh",
+      "John Coltrane – jazz saxophone god born in Hamlet, NC, performed throughout the Raleigh area"
+    ],
+    "attractions": [
+      "North Carolina Museum of Natural Sciences (largest in the Southeast, free admission)",
+      "North Carolina Museum of Art and its Park",
+      "North Carolina Museum of History",
+      "Pullen Park (one of the oldest amusement parks in the US)",
+      "Mordecai Historic Park",
+      "NC State University Centennial Campus",
+      "Historic Oakwood Victorian neighborhood"
+    ],
+    "funFact": "Research Triangle Park — situated between Raleigh, Durham, and Chapel Hill — spans 7,000 acres and is home to over 300 companies including IBM, Cisco, GlaxoSmithKline, and Lenovo, making it one of the most concentrated technology and research hubs in the world."
+  },
+  {
+    "name": "Sacramento",
+    "state": "CA",
+    "history": "Founded in 1839 by Swiss immigrant John Sutter, Sacramento became the western terminus of the first transcontinental railroad in 1869 and the starting point of the Pony Express in 1860. The city exploded during the 1849 Gold Rush from a small fort to a booming supply hub almost overnight. Sacramento has been California's state capital since 1854, and the fertile Sacramento Valley surrounding it produces more agricultural variety — over 450 crops — than any other region in the United States.",
+    "famousPeople": [
+      "Joan Didion – influential author and journalist who grew up in Sacramento and wrote about California identity",
+      "Billie Joe Armstrong – Green Day frontman from Rodeo, CA, closely associated with Sacramento punk scene",
+      "Tom Hanks – Oscar-winning actor born in Concord, CA, raised in Oakland and Sacramento",
+      "Kevin Johnson – NBA point guard and two-term Sacramento mayor",
+      "William Land – Sacramento pioneer whose estate became the beloved Land Park neighborhood"
+    ],
+    "attractions": [
+      "California State Capitol and Museum",
+      "Old Sacramento State Historic Park (Gold Rush-era waterfront)",
+      "Crocker Art Museum (oldest public art museum west of the Mississippi)",
+      "California State Railroad Museum",
+      "Sutter's Fort State Historic Park",
+      "American River Parkway (32-mile biking and hiking trail)",
+      "Golden 1 Center"
+    ],
+    "funFact": "Sacramento is called the 'Farm-to-Fork Capital of America' — the surrounding Sacramento Valley produces over 450 different crops. More than 1.5 million acres of farmland supply food to the entire nation and 58 countries worldwide."
+  },
+  {
+    "name": "Milwaukee",
+    "state": "WI",
+    "history": "Milwaukee was settled in the 1830s by European immigrants, predominantly German, who transformed it into the 'German Athens of America.' The city became a world capital of beer: Pabst, Schlitz, Blatz, and Miller all originated here, and by 1890 Milwaukee produced more beer per capita than any city on Earth. The city was also a major manufacturing hub — Harley-Davidson was founded in a small wooden shed here in 1903. While heavy industry declined, Milwaukee reinvented itself around education, healthcare, and tourism.",
+    "famousPeople": [
+      "Gene Wilder – beloved comic actor (Willie Wonka, Young Frankenstein) born in Milwaukee",
+      "Spencer Tracy – two-time Oscar-winning actor born in Milwaukee",
+      "Liberace – flamboyant pianist and entertainer born in West Allis, a Milwaukee suburb",
+      "Pat Crawford Brown – acclaimed character actress from Milwaukee",
+      "Golda Meir – Prime Minister of Israel, emigrated to America and grew up in Milwaukee"
+    ],
+    "attractions": [
+      "Milwaukee Art Museum (Santiago Calatrava's stunning winged building)",
+      "Harley-Davidson Museum",
+      "Milwaukee Public Museum",
+      "Summerfest grounds (world's largest music festival)",
+      "Historic Third Ward neighborhood",
+      "Miller Park (American Family Field)",
+      "Mitchell Park Horticultural Conservatory (The Domes)"
+    ],
+    "funFact": "Milwaukee's Summerfest is certified by Guinness World Records as the world's largest music festival. Running for 11 days each summer, it draws approximately 800,000 attendees with 800+ performers across 12 stages along Lake Michigan."
+  },
+  {
+    "name": "Albuquerque",
+    "state": "NM",
+    "history": "Founded in 1706 as a Spanish colonial outpost and named after the Duke of Alburquerque (the first 'r' was dropped over time), Albuquerque sits in the Rio Grande valley flanked by the Sandia Mountains. The city grew modestly until World War II, when Kirtland Air Force Base and Sandia National Laboratories transformed it into a center for nuclear weapons research. The city gained global pop culture fame as the setting for Breaking Bad (2008-2013) and its spinoff Better Call Saul.",
+    "famousPeople": [
+      "Neil Patrick Harris – actor and TV host born in Albuquerque",
+      "William Bonney 'Billy the Kid' – legendary outlaw who lived and died in New Mexico Territory",
+      "Al Unser – four-time Indianapolis 500 champion from Albuquerque",
+      "Bobby Unser – three-time Indy 500 champion and Al's brother, also from Albuquerque",
+      "Demi Moore – actress born in Roswell, NM, spent formative years in Albuquerque"
+    ],
+    "attractions": [
+      "Albuquerque International Balloon Fiesta (world's largest balloon festival, October)",
+      "Old Town Albuquerque (historic plaza and adobe buildings)",
+      "Sandia Peak Tramway (world's longest aerial tramway, 2.7 miles)",
+      "Petroglyph National Monument",
+      "National Museum of Nuclear Science and History",
+      "Breaking Bad and Better Call Saul filming locations",
+      "ABQ BioPark Zoo and Botanic Garden"
+    ],
+    "funFact": "The Albuquerque International Balloon Fiesta is the world's largest hot air balloon festival — over 500 balloons from 60 nations gather each October, creating skies packed with colorful shapes that attract 800,000 spectators, making it New Mexico's biggest annual event."
+  },
+  {
+    "name": "Cleveland",
+    "state": "OH",
+    "history": "Founded in 1796 by General Moses Cleaveland (who surveyed the area; his name was shortened to fit a newspaper headline), Cleveland grew into an industrial giant through the 19th century on the southern shore of Lake Erie. John D. Rockefeller built Standard Oil here in 1870. At its industrial peak, Cleveland ranked as America's fifth-largest city. After decades of deindustrialization, Cleveland reinvented itself as a center for healthcare (Cleveland Clinic is consistently rated the best hospital in America), education, and culture.",
+    "famousPeople": [
+      "John D. Rockefeller – Standard Oil founder and America's first billionaire, grew up in Cleveland",
+      "Halle Berry – Oscar-winning actress born in Cleveland",
+      "Drew Carey – comedian and The Price Is Right host, born in Cleveland",
+      "LeBron James – NBA's greatest player, born in Akron just 40 miles from Cleveland",
+      "Alan Freed – DJ who coined the term 'rock and roll' while broadcasting from Cleveland in 1951"
+    ],
+    "attractions": [
+      "Rock and Roll Hall of Fame and Museum",
+      "Cleveland Museum of Art (free general admission)",
+      "West Side Market (operating since 1912)",
+      "Great Lakes Science Center",
+      "Cleveland Botanical Garden",
+      "Progressive Field (home of the Guardians)",
+      "Little Italy neighborhood"
+    ],
+    "funFact": "The Rock and Roll Hall of Fame is in Cleveland for a very specific reason: DJ Alan Freed coined the term 'rock and roll' on Cleveland's WJW radio in 1951, and the city hosted the first-ever rock concert in history — the Moondog Coronation Ball — in 1952."
+  },
+  {
+    "name": "Tampa",
+    "state": "FL",
+    "history": "Tampa was a tiny fishing village when Fort Brooke was established there in 1824. The arrival of the railroad in 1884 and the cigar industry — brought by Cuban immigrants to the nearby Ybor City neighborhood in 1886 — transformed it into a booming city. Tampa served as the embarkation point for Teddy Roosevelt's Rough Riders during the Spanish-American War in 1898. Today the Tampa Bay region is one of the fastest-growing metro areas in the United States.",
+    "famousPeople": [
+      "Peter O'Brien – Baseball Hall of Famer who played for Tampa in the early leagues",
+      "Hulk Hogan – professional wrestling legend who lived in Tampa for decades",
+      "Tom Brady – brought two Super Bowl championships to Tampa while playing for the Buccaneers",
+      "Burt Reynolds – actor born in Waycross, GA but was closely associated with Florida",
+      "Paul Reubens – Pee-wee Herman actor who grew up in nearby Sarasota"
+    ],
+    "attractions": [
+      "Ybor City National Historic Landmark District",
+      "Tampa Riverwalk",
+      "Florida Aquarium",
+      "Busch Gardens Tampa Bay",
+      "Tampa Museum of Art",
+      "The Cuban Club",
+      "Clearwater Beach (rated best beach on Gulf Coast)"
+    ],
+    "funFact": "Tampa's Ybor City was once the 'Cigar Capital of the World' — by 1900, over 200 factories were producing 300 million hand-rolled cigars per year, employing thousands of Cuban, Spanish, and Italian immigrants in the neighborhood."
+  },
+  {
+    "name": "Detroit",
+    "state": "MI",
+    "history": "Founded as Fort Pontchartrain du Detroit by French explorer Antoine de la Mothe Cadillac in 1701, Detroit became the center of the American automobile industry in the early 20th century. Ford, General Motors, and Chrysler all were born or grew to dominance here, earning Detroit the title 'Motor City.' The city also gave birth to Motown Records in 1959, producing a sound that defined American pop music. Detroit's dramatic decline after auto industry collapse and a stunning 2013 municipal bankruptcy has been followed by a remarkable revitalization.",
+    "famousPeople": [
+      "Henry Ford – father of the automobile assembly line and founder of Ford Motor Company",
+      "Berry Gordy – Motown Records founder who created the 'Sound of Young America'",
+      "Stevie Wonder – visionary musician and Motown legend born in Saginaw, recorded in Detroit",
+      "Eminem – hip-hop's best-selling artist of all time, born and raised in Detroit",
+      "Diana Ross – Supremes lead singer and Motown icon, born in Detroit's Brewster Projects",
+      "Madonna – pop music icon born in Bay City, raised in the Detroit suburbs"
+    ],
+    "attractions": [
+      "Motown Museum (Hitsville U.S.A.)",
+      "Detroit Institute of Arts (DIA)",
+      "Henry Ford Museum of American Innovation",
+      "Greenfield Village living history museum",
+      "Detroit Riverwalk",
+      "Eastern Market (operating since 1891)",
+      "Belle Isle Park"
+    ],
+    "funFact": "Detroit's Motown Records produced more #1 hits in the 1960s than any other record label in the world — in 1966 alone, 75% of Motown's singles entered the pop charts, an astonishing hit rate unmatched in music industry history."
+  },
+  {
+    "name": "London",
+    "state": "ENG",
+    "history": "Founded by the Romans around 43 AD as Londinium, London grew from a small trading port on the Thames into the capital of the British Empire, the largest empire in history. The city has survived devastating events including the Great Fire of 1666, the Blitz of World War II, and centuries of political upheaval, emerging each time as a global center of finance, culture, and governance.",
+    "famousPeople": [
+      "William Shakespeare — playwright who performed at the Globe Theatre (1564–1616)",
+      "Charles Dickens — novelist who chronicled Victorian London (1812–1870)",
+      "Queen Elizabeth II — longest-reigning British monarch (1926–2022)",
+      "Alfred Hitchcock — pioneering filmmaker born in Leytonstone (1899–1980)",
+      "Alan Turing — computer science pioneer and WWII codebreaker (1912–1954)",
+      "David Bowie — groundbreaking musician and cultural icon (1947–2016)",
+      "Daniel Day-Lewis — three-time Oscar-winning actor (b. 1957)"
+    ],
+    "attractions": [
+      "Tower of London — a 1,000-year-old fortress housing the Crown Jewels and a dark history of royal imprisonment.",
+      "British Museum — home to eight million works including the Rosetta Stone and Elgin Marbles, with free admission.",
+      "Buckingham Palace — the official London residence of the British monarch, famous for its Changing of the Guard ceremony.",
+      "Westminster Abbey — a Gothic masterpiece where every English coronation since 1066 has taken place.",
+      "The London Eye — a 443-foot observation wheel offering panoramic views across the Thames and city skyline.",
+      "Big Ben and the Houses of Parliament — the iconic neo-Gothic seat of British government beside the River Thames.",
+      "Borough Market — a thousand-year-old food market beneath railway arches showcasing artisan vendors from around the world."
+    ],
+    "funFact": "London has more than 170 museums and is home to the world's oldest underground railway, the Tube, which opened in 1863 — yet only about 45% of its track is actually underground."
+  },
+  {
+    "name": "Arada",
+    "state": "AA",
+    "history": "Arada is one of the oldest and most historic districts of Addis Ababa, established in the late 19th century shortly after Emperor Menelik II founded the capital in 1886. It grew around the iconic St. George's Cathedral and the bustling Piazza area, becoming the commercial and cultural heart of the city during the early 20th century, particularly shaped by Italian architectural influence during the brief occupation (1936–1941).",
+    "famousPeople": [
+      "Haile Selassie I — Emperor of Ethiopia who frequented Arada's churches and royal sites (1892–1975)",
+      "Tilahun Gessesse — legendary Ethiopian singer known as 'The Voice' who performed in Arada's clubs (1940–2009)",
+      "Aster Aweke — internationally acclaimed Ethiopian singer who began her career in Addis (b. 1959)",
+      "Afewerk Tekle — renowned painter whose works are displayed in Arada's institutions (1932–2012)",
+      "Mahmoud Ahmed — Ethio-jazz vocal icon who rose from Arada's music scene (b. 1941)",
+      "Mulatu Astatke — father of Ethio-jazz who shaped Addis Ababa's musical identity (b. 1943)",
+      "Abebe Bikila — Olympic marathon champion celebrated throughout the capital (1932–1973)"
+    ],
+    "attractions": [
+      "St. George's Cathedral — a striking octagonal cathedral built in 1896 to commemorate Ethiopia's victory at the Battle of Adwa",
+      "Piazza — the historic Italian-influenced district filled with vintage cafes, jewelry shops, and Art Deco architecture",
+      "Taitu Hotel — the oldest hotel in Ethiopia, opened in 1907 by Empress Taitu and still serving traditional cuisine",
+      "Menelik II Mausoleum — the resting place of Emperor Menelik II, located within the Ba'eta Le Mariam Monastery",
+      "Addis Ababa Museum — showcasing the city's history, royal artifacts, and urban evolution since its founding",
+      "Arada Giorgis Market — a vibrant traditional market offering everything from spices to religious icons",
+      "Cinema Empire — a beautifully preserved Italian-era movie theater that remains a cultural landmark"
+    ],
+    "funFact": "Arada's name became so synonymous with sophistication and street-smart style that 'Arada' entered Ethiopian slang as an adjective meaning 'cool,' 'clever,' or 'urbane' — calling someone an 'Arada' is one of the highest compliments in Amharic youth culture."
+  }
+]
