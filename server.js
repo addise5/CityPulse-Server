@@ -128,6 +128,40 @@ app.get('/health', (_req, res) => {
   res.json({ status: 'ok', cachedCities: loadCache().length });
 });
 
+app.get('/weather', async (req, res) => {
+  const { city, state } = req.query;
+  if (!city?.trim()) return res.status(400).json({ error: 'city is required' });
+
+  const apiKey = process.env.OPENWEATHER_API_KEY;
+  if (!apiKey) return res.status(503).json({ error: 'Weather service not configured' });
+
+  const q = state ? `${city.trim()},${state.trim()},US` : city.trim();
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(q)}&appid=${apiKey}&units=imperial`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.warn(`[weather]    OpenWeather error for "${q}": ${data.message}`);
+      return res.status(response.status).json({ error: data.message ?? 'Weather fetch failed' });
+    }
+
+    console.log(`[weather]    ${data.name} — ${data.weather[0].description}, ${Math.round(data.main.temp)}°F`);
+    res.json({
+      temperature: Math.round(data.main.temp),
+      feelsLike:   Math.round(data.main.feels_like),
+      description: data.weather[0].description,
+      icon:        data.weather[0].icon,
+      humidity:    data.main.humidity,
+      windSpeed:   Math.round(data.wind?.speed ?? 0),
+    });
+  } catch (err) {
+    console.error(`[weather]    fetch error: ${err.message}`);
+    res.status(500).json({ error: 'Weather service error' });
+  }
+});
+
 app.post('/city', async (req, res) => {
   const { cityName, state = '' } = req.body ?? {};
 
@@ -167,5 +201,5 @@ app.listen(PORT, () => {
   const count = loadCache().length;
   console.log(`\nCityPulse server  →  http://localhost:${PORT}`);
   console.log(`Cache loaded      →  ${count} cities pre-loaded`);
-  console.log(`Endpoints         →  POST /city   GET /health\n`);
+  console.log(`Endpoints         →  POST /city   GET /weather   GET /health\n`);
 });
