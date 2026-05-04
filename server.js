@@ -129,14 +129,21 @@ app.get('/health', (_req, res) => {
 });
 
 app.get('/weather', async (req, res) => {
-  const { city, state } = req.query;
-  if (!city?.trim()) return res.status(400).json({ error: 'city is required' });
-
+  const { city, state, lat, lon } = req.query;
   const apiKey = process.env.OPENWEATHER_API_KEY;
   if (!apiKey) return res.status(503).json({ error: 'Weather service not configured' });
 
-  const q = state ? `${city.trim()},${state.trim()},US` : city.trim();
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(q)}&appid=${apiKey}&units=imperial`;
+  let url;
+  if (lat && lon) {
+    // Coordinate-based lookup — most accurate, used for GPS-detected cities
+    url = `https://api.openweathermap.org/data/2.5/weather?lat=${encodeURIComponent(lat)}&lon=${encodeURIComponent(lon)}&appid=${apiKey}&units=imperial`;
+  } else if (city?.trim()) {
+    // City-name fallback — used for history loads
+    const q = state ? `${city.trim()},${state.trim()},US` : city.trim();
+    url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(q)}&appid=${apiKey}&units=imperial`;
+  } else {
+    return res.status(400).json({ error: 'lat/lon or city is required' });
+  }
 
   try {
     const response = await fetch(url);
