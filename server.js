@@ -122,6 +122,19 @@ Return ONLY the raw JSON object. No markdown fences, no explanation, no preamble
   return cityData;
 }
 
+// ── Helpers ─────────────────────────────────────────────────────────────────
+
+function haversineDistance(lat1, lon1, lat2, lon2) {
+  const R = 3958.8; // Earth radius in miles
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+    Math.sin(dLon / 2) ** 2;
+  return R * 2 * Math.asin(Math.sqrt(a));
+}
+
 // ── Routes ──────────────────────────────────────────────────────────────────
 
 app.get('/health', (_req, res) => {
@@ -169,6 +182,72 @@ app.get('/weather', async (req, res) => {
   }
 });
 
+app.get('/nearby', async (req, res) => {
+  const { lat, lon } = req.query;
+  if (!lat || !lon) return res.status(400).json({ error: 'lat and lon are required' });
+
+  const apiKey = process.env.OPENWEATHER_API_KEY;
+  if (!apiKey) return res.status(503).json({ error: 'Service not configured' });
+
+  const parsedLat = parseFloat(lat);
+  const parsedLon = parseFloat(lon);
+
+  try {
+    // Step 1: get candidate cities near the point
+    const findUrl =
+      `https://api.openweathermap.org/data/2.5/find` +
+      `?lat=${parsedLat}&lon=${parsedLon}&cnt=15&appid=${apiKey}`;
+    const findResp = await fetch(findUrl);
+    const findData = await findResp.json();
+
+    if (!findResp.ok || !Array.isArray(findData.list)) {
+      console.warn(`[nearby]     OpenWeather find failed: ${findData.message ?? 'unknown'}`);
+      return res.json([]);
+    }
+
+    // Step 2: calculate distances, keep within 30 miles (exclude < 1 mi = current city)
+    const candidates = findData.list
+      .map(c => ({
+        name: c.name,
+        lat:  c.coord.lat,
+        lon:  c.coord.lon,
+        distanceMiles: haversineDistance(parsedLat, parsedLon, c.coord.lat, c.coord.lon),
+      }))
+      .filter(c => c.distanceMiles > 1 && c.distanceMiles <= 30)
+      .sort((a, b) => a.distanceMiles - b.distanceMiles)
+      .slice(0, 5);
+
+    // Step 3: reverse-geocode each candidate in parallel to get US state
+    const withState = await Promise.all(
+      candidates.map(async (city) => {
+        try {
+          const geoUrl =
+            `https://api.openweathermap.org/geo/1.0/reverse` +
+            `?lat=${city.lat}&lon=${city.lon}&limit=1&appid=${apiKey}`;
+          const geoResp = await fetch(geoUrl);
+          const geoData = await geoResp.json();
+          const rawState = geoData[0]?.state ?? '';
+          return {
+            name:          geoData[0]?.name ?? city.name,
+            state:         normalizeState(rawState),
+            distanceMiles: Math.round(city.distanceMiles),
+            lat:           city.lat,
+            lon:           city.lon,
+          };
+        } catch {
+          return { name: city.name, state: '', distanceMiles: Math.round(city.distanceMiles), lat: city.lat, lon: city.lon };
+        }
+      })
+    );
+
+    console.log(`[nearby]     ${withState.length} cities within 30mi of (${parsedLat.toFixed(3)},${parsedLon.toFixed(3)}): ${withState.map(c => c.name).join(', ')}`);
+    res.json(withState);
+  } catch (err) {
+    console.error(`[nearby]     error: ${err.message}`);
+    res.json([]); // degrade gracefully — nearby is non-critical
+  }
+});
+
 app.post('/city', async (req, res) => {
   const { cityName, state = '' } = req.body ?? {};
 
@@ -208,5 +287,5 @@ app.listen(PORT, () => {
   const count = loadCache().length;
   console.log(`\nCityPulse server  →  http://localhost:${PORT}`);
   console.log(`Cache loaded      →  ${count} cities pre-loaded`);
-  console.log(`Endpoints         →  POST /city   GET /weather   GET /health\n`);
+  console.log(`Endpoints         →  POST /city   GET /weather   GET /nearby   GET /health\n`);
 });
