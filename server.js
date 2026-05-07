@@ -94,13 +94,12 @@ function buildCityPrompt(cityName, state, parentCity, country, language = 'Engli
   const isDistrict = parentCity && parentCity.trim() !== '' && parentCity.toLowerCase() !== cityName.toLowerCase();
   const location = state ? `${cityName}, ${state}` : cityName;
   const parentLocation = country ? `${parentCity}, ${country}` : parentCity;
-  const langInstruction = language !== 'English'
-    ? `\nRespond entirely in ${language}. All content including history, famous people, attractions, and fun fact must be written in ${language} only. City and people names may remain in their original form.`
+
+  const langHeader = language !== 'English'
+    ? `IMPORTANT: You must write ALL content entirely in ${language}. This includes the history paragraph, every famous person description, every attraction description, the fun fact, and every other text field. Do not use any English words except for proper nouns like city names and personal names.\n\n`
     : '';
 
-  const jsonSchema = `${langInstruction}
-
-Respond with a single valid JSON object using exactly these fields:
+  const jsonSchema = `Respond with a single valid JSON object using exactly these fields:
 - "name": string — official name of the place, properly capitalized
 - "state": string — 2-letter US state abbreviation (e.g. "CA", "TX"), or region/country code for international places
 - "history": string — 2-3 engaging sentences
@@ -111,7 +110,7 @@ Respond with a single valid JSON object using exactly these fields:
 Return ONLY the raw JSON object. No markdown fences, no explanation, no preamble.`;
 
   if (isDistrict) {
-    return `You are a knowledgeable city guide specializing in neighborhoods, districts, and sub-city areas worldwide.
+    return `${langHeader}You are a knowledgeable city guide specializing in neighborhoods, districts, and sub-city areas worldwide.
 
 The user is in ${cityName}, which is a specific district or sub-city within ${parentLocation}.
 
@@ -130,7 +129,7 @@ This logic applies worldwide: London boroughs, New York boroughs, Paris arrondis
 ${jsonSchema}`;
   }
 
-  return `You are a knowledgeable and engaging city guide. Provide accurate, interesting information about any city worldwide.
+  return `${langHeader}You are a knowledgeable and engaging city guide. Provide accurate, interesting information about any city worldwide.
 
 ${jsonSchema}`;
 }
