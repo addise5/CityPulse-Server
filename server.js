@@ -53,24 +53,28 @@ function saveCache(cities) {
   writeFileSync(CACHE_FILE, JSON.stringify(cities, null, 2));
 }
 
-function findInCache(cities, cityName, state, parentCity = '') {
-  const name = cityName.toLowerCase();
-  const abbr = normalizeState(state).toUpperCase();
+function findInCache(cities, cityName, state, parentCity = '', language = 'English') {
+  const name   = cityName.toLowerCase();
+  const abbr   = normalizeState(state).toUpperCase();
   const parent = parentCity.toLowerCase();
+  const isDefaultLang = language === 'English' || !language;
+
+  const langMatches = (c) => isDefaultLang
+    ? (!c.language || c.language === 'English')
+    : c.language === language;
 
   if (parent) {
-    // Prefer a district-specific cached entry
     const districtHit = cities.find(c =>
       c.name.toLowerCase() === name &&
-      (c.parentCity ?? '').toLowerCase() === parent
+      (c.parentCity ?? '').toLowerCase() === parent &&
+      langMatches(c)
     );
     if (districtHit) return districtHit;
   }
 
-  // Fall back to a generic city entry (no parentCity stored)
   return (
-    cities.find(c => c.name.toLowerCase() === name && c.state.toUpperCase() === abbr && !c.parentCity) ??
-    cities.find(c => c.name.toLowerCase() === name && !c.parentCity)
+    cities.find(c => c.name.toLowerCase() === name && c.state.toUpperCase() === abbr && !c.parentCity && langMatches(c)) ??
+    cities.find(c => c.name.toLowerCase() === name && !c.parentCity && langMatches(c))
   );
 }
 
@@ -86,12 +90,17 @@ function extractJSON(text) {
   return JSON.parse(objMatch[0]);
 }
 
-function buildCityPrompt(cityName, state, parentCity, country) {
+function buildCityPrompt(cityName, state, parentCity, country, language = 'English') {
   const isDistrict = parentCity && parentCity.trim() !== '' && parentCity.toLowerCase() !== cityName.toLowerCase();
   const location = state ? `${cityName}, ${state}` : cityName;
   const parentLocation = country ? `${parentCity}, ${country}` : parentCity;
+  const langInstruction = language !== 'English'
+    ? `\nRespond entirely in ${language}. All content including history, famous people, attractions, and fun fact must be written in ${language} only. City and people names may remain in their original form.`
+    : '';
 
-  const jsonSchema = `Respond with a single valid JSON object using exactly these fields:
+  const jsonSchema = `${langInstruction}
+
+Respond with a single valid JSON object using exactly these fields:
 - "name": string — official name of the place, properly capitalized
 - "state": string — 2-letter US state abbreviation (e.g. "CA", "TX"), or region/country code for international places
 - "history": string — 2-3 engaging sentences
@@ -126,9 +135,9 @@ ${jsonSchema}`;
 ${jsonSchema}`;
 }
 
-async function generateCityData(cityName, state, parentCity = '', country = '') {
+async function generateCityData(cityName, state, parentCity = '', country = '', language = 'English') {
   const location = state ? `${cityName}, ${state}` : cityName;
-  const systemPrompt = buildCityPrompt(cityName, state, parentCity, country);
+  const systemPrompt = buildCityPrompt(cityName, state, parentCity, country, language);
 
   const userContent = parentCity
     ? `Generate information for: ${location} (district/sub-city within ${parentCity}${country ? ', ' + country : ''})`
@@ -158,7 +167,6 @@ async function generateCityData(cityName, state, parentCity = '', country = '') 
 
   const cityData = extractJSON(textBlock.text);
 
-  // Log token usage for visibility
   const usage = response.usage;
   console.log(
     `  tokens: ${usage.input_tokens} in / ${usage.output_tokens} out` +
@@ -194,10 +202,8 @@ app.get('/weather', async (req, res) => {
 
   let url;
   if (lat && lon) {
-    // Coordinate-based lookup — most accurate, used for GPS-detected cities
     url = `https://api.openweathermap.org/data/2.5/weather?lat=${encodeURIComponent(lat)}&lon=${encodeURIComponent(lon)}&appid=${apiKey}&units=imperial`;
   } else if (city?.trim()) {
-    // City-name fallback — used for history loads
     const q = state ? `${city.trim()},${state.trim()},US` : city.trim();
     url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(q)}&appid=${apiKey}&units=imperial`;
   } else {
@@ -209,7 +215,7 @@ app.get('/weather', async (req, res) => {
     const data = await response.json();
 
     if (!response.ok) {
-      console.warn(`[weather]    OpenWeather error for "${q}": ${data.message}`);
+      console.warn(`[weather]    OpenWeather error for "${city}": ${data.message}`);
       return res.status(response.status).json({ error: data.message ?? 'Weather fetch failed' });
     }
 
@@ -239,7 +245,6 @@ app.get('/nearby', async (req, res) => {
   const parsedLon = parseFloat(lon);
 
   try {
-    // Step 1: get candidate cities near the point
     const findUrl =
       `https://api.openweathermap.org/data/2.5/find` +
       `?lat=${parsedLat}&lon=${parsedLon}&cnt=15&appid=${apiKey}`;
@@ -251,7 +256,6 @@ app.get('/nearby', async (req, res) => {
       return res.json([]);
     }
 
-    // Step 2: calculate distances, keep within 30 miles (exclude < 1 mi = current city)
     const candidates = findData.list
       .map(c => ({
         name: c.name,
@@ -263,7 +267,6 @@ app.get('/nearby', async (req, res) => {
       .sort((a, b) => a.distanceMiles - b.distanceMiles)
       .slice(0, 5);
 
-    // Step 3: reverse-geocode each candidate in parallel to get US state
     const withState = await Promise.all(
       candidates.map(async (city) => {
         try {
@@ -290,44 +293,42 @@ app.get('/nearby', async (req, res) => {
     res.json(withState);
   } catch (err) {
     console.error(`[nearby]     error: ${err.message}`);
-    res.json([]); // degrade gracefully — nearby is non-critical
+    res.json([]);
   }
 });
 
 app.post('/city', async (req, res) => {
-  const { cityName, state = '', parentCity = '', country = '', countryCode = '' } = req.body ?? {};
+  const { cityName, state = '', parentCity = '', country = '', countryCode = '', language = 'English' } = req.body ?? {};
 
   if (!cityName?.trim()) {
     return res.status(400).json({ error: 'cityName is required' });
   }
 
-  const name = cityName.trim();
-  const abbr = normalizeState(state);
+  const name   = cityName.trim();
+  const abbr   = normalizeState(state);
   const parent = parentCity.trim();
   const isDistrict = parent !== '' && parent.toLowerCase() !== name.toLowerCase();
 
   try {
     const cities = loadCache();
-    const cached = findInCache(cities, name, state, parent);
+    const cached = findInCache(cities, name, state, parent, language);
 
     if (cached) {
       const label = isDistrict ? `${name} (district of ${parent})` : `${name}, ${abbr}`;
-      console.log(`[cache hit]  ${label}`);
+      console.log(`[cache hit]  ${label} [${language}]`);
       return res.json(cached);
     }
 
     const label = isDistrict ? `${name} (district of ${parent}, ${country || abbr})` : `${name}, ${abbr}`;
-    console.log(`[generating] ${label} — calling Claude API...`);
-    const cityData = await generateCityData(name, abbr, parent, country);
+    console.log(`[generating] ${label} [${language}] — calling Claude API...`);
+    const cityData = await generateCityData(name, abbr, parent, country, language);
 
-    // Tag district entries so the cache can distinguish them from same-named cities
-    if (isDistrict) {
-      cityData.parentCity = parent;
-    }
+    if (isDistrict) cityData.parentCity = parent;
+    if (language !== 'English') cityData.language = language;
 
     cities.push(cityData);
     saveCache(cities);
-    console.log(`[saved]      ${cityData.name}${isDistrict ? ` (${parent})` : `, ${cityData.state}`} → cities.json (${cities.length} total)`);
+    console.log(`[saved]      ${cityData.name}${isDistrict ? ` (${parent})` : `, ${cityData.state}`} [${language}] → cities.json (${cities.length} total)`);
 
     res.json(cityData);
   } catch (err) {
@@ -357,21 +358,30 @@ function saveItineraryCache(obj) {
 }
 
 app.get('/onthisday', async (req, res) => {
-  const { month, day } = req.query;
+  const { month, day, language = 'English' } = req.query;
   if (!month || !day) return res.status(400).json({ error: 'month and day are required' });
 
-  const key = `${month}-${day}`;
-  const cache = loadOnThisDayCache();
+  const key       = `${month}-${day}-${language}`;
+  const legacyKey = `${month}-${day}`;
+  const cache     = loadOnThisDayCache();
 
   if (cache[key]) {
-    console.log(`[cache hit]  On This Day ${key}`);
+    console.log(`[cache hit]  On This Day ${month}-${day} [${language}]`);
     return res.json(cache[key]);
+  }
+  // Serve existing English cache for English requests (backward compat)
+  if (language === 'English' && cache[legacyKey]) {
+    console.log(`[cache hit]  On This Day ${month}-${day} [legacy]`);
+    return res.json(cache[legacyKey]);
   }
 
   const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   const monthName  = monthNames[parseInt(month) - 1] ?? month;
+  const langInstruction = language !== 'English'
+    ? `Return all event descriptions in ${language}.`
+    : '';
 
-  console.log(`[generating] On This Day ${key} — calling Claude API...`);
+  console.log(`[generating] On This Day ${month}-${day} [${language}] — calling Claude API...`);
 
   try {
     const response = await client.messages.create({
@@ -381,6 +391,7 @@ app.get('/onthisday', async (req, res) => {
       messages: [{
         role: 'user',
         content: `List exactly 5 significant historical events that occurred on ${monthName} ${day} throughout world history. Include a diverse mix across different centuries, countries, and categories (discoveries, battles, births, achievements, political milestones, scientific breakthroughs). Avoid repeating the same country or era.
+${langInstruction}
 
 Respond with a single raw JSON array of exactly 5 objects — no markdown fences, no preamble:
 [
@@ -405,7 +416,7 @@ Respond with a single raw JSON array of exactly 5 objects — no markdown fences
 
     cache[key] = events;
     saveOnThisDayCache(cache);
-    console.log(`[saved]      On This Day ${key}`);
+    console.log(`[saved]      On This Day ${month}-${day} [${language}]`);
 
     res.json(events);
   } catch (err) {
@@ -417,21 +428,29 @@ Respond with a single raw JSON array of exactly 5 objects — no markdown fences
 // ── Itinerary ─────────────────────────────────────────────────────────────────
 
 app.post('/itinerary', async (req, res) => {
-  const { cityName, state = '', country = '' } = req.body ?? {};
+  const { cityName, state = '', country = '', language = 'English' } = req.body ?? {};
   if (!cityName?.trim()) return res.status(400).json({ error: 'cityName is required' });
 
-  const name  = cityName.trim();
-  const abbr  = normalizeState(state);
-  const key   = `${name.toLowerCase()}-${abbr.toLowerCase()}`;
-  const cache = loadItineraryCache();
+  const name      = cityName.trim();
+  const abbr      = normalizeState(state);
+  const key       = `${name.toLowerCase()}-${abbr.toLowerCase()}-${language}`;
+  const legacyKey = `${name.toLowerCase()}-${abbr.toLowerCase()}`;
+  const cache     = loadItineraryCache();
 
   if (cache[key]) {
-    console.log(`[cache hit]  itinerary: ${name}, ${abbr}`);
+    console.log(`[cache hit]  itinerary: ${name}, ${abbr} [${language}]`);
     return res.json(cache[key]);
+  }
+  if (language === 'English' && cache[legacyKey]) {
+    console.log(`[cache hit]  itinerary: ${name}, ${abbr} [legacy]`);
+    return res.json(cache[legacyKey]);
   }
 
   const location = abbr ? `${name}, ${abbr}` : name;
-  console.log(`[generating] itinerary: ${location} — calling Claude API...`);
+  const langInstruction = language !== 'English'
+    ? `\nWrite the entire itinerary in ${language}, including all activity titles, descriptions, tips, and recommendations.`
+    : '';
+  console.log(`[generating] itinerary: ${location} [${language}] — calling Claude API...`);
 
   try {
     const response = await client.messages.create({
@@ -440,7 +459,7 @@ app.post('/itinerary', async (req, res) => {
       thinking: { type: 'adaptive' },
       messages: [{
         role: 'user',
-        content: `Create a curated 48-hour itinerary for a first-time visitor to ${location}${country ? ', ' + country : ''}. Plan exactly 2 days with 4-5 activities per day. Use real, specific place names in ${name}. Mix culture, food, local experiences, history, and atmosphere. Make it vivid and distinctive — not generic tourist boilerplate.
+        content: `Create a curated 48-hour itinerary for a first-time visitor to ${location}${country ? ', ' + country : ''}. Plan exactly 2 days with 4-5 activities per day. Use real, specific place names in ${name}. Mix culture, food, local experiences, history, and atmosphere. Make it vivid and distinctive — not generic tourist boilerplate.${langInstruction}
 
 Respond with a single raw JSON object (no markdown fences):
 {
@@ -477,7 +496,7 @@ Respond with a single raw JSON object (no markdown fences):
 
     cache[key] = itinerary;
     saveItineraryCache(cache);
-    console.log(`[saved]      itinerary: ${name}`);
+    console.log(`[saved]      itinerary: ${name} [${language}]`);
 
     res.json(itinerary);
   } catch (err) {
